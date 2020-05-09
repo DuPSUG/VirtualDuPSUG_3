@@ -1,5 +1,6 @@
-# VirtualDuPSUG_3
-Virtual DuPSUG 🌊👨‍💻👩‍🔬 – Azure DevOps & WSL
+# Virtual DuPSUG 🐧 - WSL & Azure DevOps
+
+![2020-05-09_VirtualDuPSUG3](https://user-images.githubusercontent.com/12744735/81478372-3e96d280-921d-11ea-83ae-960b388217eb.png)
 
 This is a virtual edition of our user group, with a special focus on PowerShell Developer technologies, Azure and of course a deep dive into PowerShell. We have made the decision to host this event virtually for the first time, and we are excited to be able to open up our local user group to the global stage for the first time! We have an evening with diverse and advanced topics prepared for you presented by experienced speakers. Registration through Eventbrite is optional, with the benefit that you’ll receive an email notification with the streaming link and a calendar invite.
 
