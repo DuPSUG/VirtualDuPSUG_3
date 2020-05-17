@@ -34,16 +34,43 @@ The event will take place on the 21th of May, all times here are listed in CEST.
 
 ## Session Information
 
-### Title
+### DuPSUG Announcements
+
+Informational session about the event, agenda of the evening future events and updates from the PowerShell world. We will announce the next virtual edition of DuPSUG here and we will be happy to hear your feedback about what content, which sessions or even which speakers you would like to see at future editions of our virtual user group.
+
+### DevOps Nirvana with Azure Pipelines
+
+In this session Daan will take us through how he achieved DevOps Nirvana by applying CI/CD principles with Azure Pipelines.
+
+### Azure DevOps with Databases For People In A Hurry
+
+DevOps with databases is considered a concept that takes a lot of effort. Actually the opposite is true. If you use the right tools and methods you can achieve this in a very short period of time. I’m always in a hurry and don’t want to spend a lot of time doing repetitive tasks.
+
+We will learn how to generate a SSDT solution, basic unit tests and implement the solution into Azure DevOps. Come to this session to learn how to easy of the transition from databases without source control to fully tested in a matter of minutes.
+
+### Cross-Platform Goodness with the WSL
+The WSL running in Windows can be a great tool for people who need the best of both worlds, for everyday administration to cross-platform testing of apps and code. We will take a deep look at WSL, highlight some of the new v2 features, and do some real world work that will show how having Linux and Windows together can be a very beneficial toolset.
 
 ## Speaker Information
 
-### 1
+### Daan Weda
 
-### 2
+Daan Weda is a Senior Cloud and Automation Engineer at Van Lanschot Kempen. His background is in Cloud and Datacenter Management, specializing in Infrastructure as Code, DevOps, Data Analytics, CI/CD, public and hybrid cloud. PowerShell enthusiast for many years and frequent visitor of the DUPSUG and the PowerShell Conference EU.
 
-### 3
+You can get in contact with Daan on Twitter at @DWeda.
 
-### Location
+### Sander Stad
+
+Father, Husband, SQL Server DBA, huge PoSh enthousiast, dbatools contributor. Cloud and Datacenter MVP. Love Crossfit and martial arts.
+
+### Mike Nelson
+
+Mike’s career in information technology spans more than three decades, involving a vast array of technologies and solutions. He has held roles in corporate management, architecture, engineering, as well as consulting. He is honored to be a 5-year Microsoft MVP award winner , Citrix Technology Advocate (CTA), and in addition, a VMware vExpert. I currently lead several user groups, including a Cloud User Group and a VMware User Group (VMUG). He has a passion for mentoring people interested in technology, and he gives presentations around the knowledge that he has and wants to share. He is always striving to learn more every day.
+
+## Location
 
 The event is hosted virtually, signing up through Eventbrite is not required, but you will receive a link to the meeting by email a day before the event takes place. We will also publish the link to the event on Twitter, an hour before the event on the [@DuPSUG](https://twitter.com/dupsug) account.
+
+## Tickets
+
+[Virtual DuPSUG – WSL & Azure DevOps - Eventbrite](https://www.eventbrite.com/e/virtual-dupsug-wsl-azure-devops-tickets-104835836810)
