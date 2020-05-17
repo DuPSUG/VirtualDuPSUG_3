@@ -19,10 +19,18 @@ All recordings are available in the following YouTube playlist:
 
 We have the following speakers presenting:
 
-* 1
-* 2 
+* Daan Weda – Senior Cloud and Automation Engineer at Van Lanschot Kempen
+* Sander Stad – Database Administrator at Waypoint Analytical
+* Mike Nelson – Solutions Architect at Pure Storage
 
 ## Agenda
+
+The event will take place on the 21th of May, all times here are listed in CEST. For the starting time in your local timezone please use the following link: May 21st 2020 – 19:00 CEST
+
+* 1900-1915 Announcements – Jaap Brasser & Barbara Forbes
+* 1915-2000 DevOps Nirvana with Azure Pipelines – Daan Weda
+* 2000-2045 Azure DevOps with Databases For People In A Hurry – Sander Stad
+* 2045-2130 Cross-Platform Goodness with the WSL – Mike Nelson
 
 ## Session Information
 
