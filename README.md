@@ -27,10 +27,10 @@ We have the following speakers presenting:
 
 The event will take place on the 21th of May, all times here are listed in CEST. For the starting time in your local timezone please use the following link: May 21st 2020 – 19:00 CEST
 
-* 1900-1915 Announcements – Jaap Brasser & Barbara Forbes
-* 1915-2000 DevOps Nirvana with Azure Pipelines – Daan Weda
-* 2000-2045 Azure DevOps with Databases For People In A Hurry – Sander Stad
-* 2045-2130 Cross-Platform Goodness with the WSL – Mike Nelson
+* 1900-1915 | Announcements | [Jaap Brasser](https://twitter.com/jaap_brasser) & [Barbara Forbes](https://twitter.com/ba4bes)
+* 1915-2000 | DevOps Nirvana with Azure Pipelines | [Daan Weda](https://twitter.com/DWeda)
+* 2000-2045 | Azure DevOps with Databases For People In A Hurry | [Sander Stad](https://twitter.com/sqlstad)
+* 2045-2130 | Cross-Platform Goodness with the WSL | [Mike Nelson](https://twitter.com/mikenelsonio)
 
 ## Session Information
 
