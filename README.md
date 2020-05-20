@@ -19,9 +19,9 @@ All recordings are available in the following YouTube playlist:
 
 We have the following speakers presenting:
 
-* Daan Weda – Senior Cloud and Automation Engineer at Van Lanschot Kempen
-* Sander Stad – Database Administrator at Waypoint Analytical
-* Mike Nelson – Solutions Architect at Pure Storage
+* [Daan Weda](https://twitter.com/DWeda) – Senior Cloud and Automation Engineer at Van Lanschot Kempen
+* [Sander Stad](https://twitter.com/sqlstad) – Database Administrator at Waypoint Analytical
+* [Mike Nelson](https://twitter.com/mikenelsonio) – Solutions Architect at Pure Storage
 
 ## Agenda
 
@@ -57,7 +57,7 @@ The WSL running in Windows can be a great tool for people who need the best of b
 
 Daan Weda is a Senior Cloud and Automation Engineer at Van Lanschot Kempen. His background is in Cloud and Datacenter Management, specializing in Infrastructure as Code, DevOps, Data Analytics, CI/CD, public and hybrid cloud. PowerShell enthusiast for many years and frequent visitor of the DUPSUG and the PowerShell Conference EU.
 
-You can get in contact with Daan on Twitter at @DWeda.
+You can get in contact with Daan on Twitter at [@DWeda](https://twitter.com/DWeda).
 
 ### Sander Stad
 
