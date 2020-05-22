@@ -1,0 +1,24 @@
+trigger:
+  branches:
+    include:
+    - master
+    - DUPSUG-Demo
+  paths:
+    include:
+     - ARM/*
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+variables:
+  #street specific
+  Department: 'dupsug'
+  DevEnvironment: dev
+  AccEnvironment: acc
+  #subscription vars
+  ServiceConnection: 'DUPSUG VS Enterprise'
+  Subscription: Visual Studio Enterprise
+
+stages:
+     - template: templates\Basic-Pipeline.yml
+     

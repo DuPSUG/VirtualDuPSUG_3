@@ -1,0 +1,49 @@
+steps:
+
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: Deploy Key Vault
+  inputs:
+          deploymentScope: 'Resource Group'
+          azureResourceManagerConnection: $(ServiceConnection)
+          subscripton: $(Subscription)
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: '${{ parameters.Department}}-${{ parameters.Env}}'
+          location: 'West Europe'
+          templateLocation: 'Linked artifact'
+          csmFile: '$(build.artifactstagingdirectory)/ARM/KeyVault/azuredeploy.json'
+          csmParametersFile: '$(build.artifactstagingdirectory)/ARM/KeyVault/azuredeploy.parameters.json'
+          deploymentMode: 'Incremental'
+          overrideParameters: '-keyVaultName ${{ parameters.Department}}-${{ parameters.Env}}-kv-01'
+           
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: Add ACL Key Vault
+  condition: eq(variables['SetACL'], 'true')
+  inputs:
+          deploymentScope: 'Resource Group'
+          azureResourceManagerConnection: $(ServiceConnection)
+          subscripton: $(Subscription)
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: '${{ parameters.Department}}-${{ parameters.Env}}'
+          location: 'West Europe'
+          templateLocation: 'Linked artifact'
+          csmFile: '$(build.artifactstagingdirectory)/ARM/KeyVault/addacl.json'
+          #csmParametersFile: '$(build.artifactstagingdirectory)/ARM/KeyVault/azuredeploy.parameters.json'
+          deploymentMode: 'Incremental'
+          overrideParameters: '-keyVaultName ${{ parameters.Department}}-${{ parameters.Env}}-kv-01 -accessPolicies $(KeyVault.AccessPolicies)'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: Deploy Azure Function
+  inputs:
+          deploymentScope: 'Resource Group'
+          azureResourceManagerConnection: $(ServiceConnection)
+          subscripton: $(Subscription)
+          action: 'Create Or Update Resource Group'
+          resourceGroupName: '${{ parameters.Department}}-${{ parameters.Env}}'
+          location: 'West Europe'
+          templateLocation: 'Linked artifact'
+          csmFile: '$(build.artifactstagingdirectory)/ARM/Function/azuredeploy.json'
+          csmParametersFile: '$(build.artifactstagingdirectory)/ARM/Function/azuredeploy.parameters.json'
+          deploymentMode: 'Incremental'
+          overrideParameters: '-siteName ${{ parameters.Department}}-${{ parameters.Env}}-FuncApp'
+
+

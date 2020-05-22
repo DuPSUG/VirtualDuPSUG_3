@@ -1,0 +1,70 @@
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    steps:
+     - template: Build.yml
+
+- stage: Development
+  variables:
+  - group: DupsugTagDev
+  jobs:
+  - job: Dev
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+         buildType: 'current'
+         #downloadType: 'single'
+         artifactName: 'Drop'
+         downloadPath: '$(System.ArtifactsDirectory)'
+    - template: PowerShell-Prereq.yml
+      parameters:
+          Department: $(Department)
+          Env: $(DevEnvironment)
+    - template: ARM-Deploy.yml
+      parameters:
+          Department: $(Department)
+          Env: $(DevEnvironment)
+    - template: Foreach-Example.yml
+      parameters:
+          Numbers: ["01", "02"]
+          Department: $(Department)
+          Env: $(DevEnvironment)
+    - template: PowerShell-Postconfig.yml
+      parameters:
+          Department: $(Department)
+          Env: $(DevEnvironment)
+
+- stage: Acceptance
+  variables:
+  - group: DupsugTagAcc
+  jobs:
+  - deployment: DeployAcceptance
+    displayName: Approve Acceptance Env
+    environment: Acc
+  - job: Acc
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+         buildType: 'current'
+         artifactName: 'Drop'
+         downloadPath: '$(System.ArtifactsDirectory)'
+    - template: PowerShell-Prereq.yml
+      parameters:
+          Department: $(Department)
+          Env: $(AccEnvironment)
+    - template: ARM-Deploy.yml
+      parameters:
+          Department: $(Department)
+          Env: $(AccEnvironment)
+    - template: Foreach-Example.yml
+      parameters:
+          Numbers: ["1", "2"]
+          Department: $(Department)
+          Env: $(AccEnvironment)
+    - template: PowerShell-Postconfig.yml
+      parameters:
+          Department: $(Department)
+          Env: $(AccEnvironment)
+

@@ -1,0 +1,23 @@
+steps:
+- task: CopyFiles@2
+  displayName: 'Copy BuildingBlocks from SourcesDirectory to ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    flattenFolders: false
+    Contents: |
+     ARM\**\*
+   
+- task: CopyFiles@2
+  displayName: 'Copy Scripts from SourcesDirectory to ArtifactStagingDirectory'
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    flattenFolders: false
+    Contents: |
+       Scripts\**\*   
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'Drop'
+    publishLocation: 'pipeline'

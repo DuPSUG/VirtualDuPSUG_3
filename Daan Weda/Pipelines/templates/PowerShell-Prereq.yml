@@ -1,0 +1,13 @@
+steps:
+
+#Get ACL
+- task: AzurePowerShell@4
+  displayName: 'Get KV ACL'
+  inputs:
+    azureSubscription: $(ServiceConnection)
+    ScriptPath: $(System.ArtifactsDirectory)\Scripts\Get-KeyVaultACL.ps1
+    ScriptArguments: -resourcegroupname '${{ parameters.Department}}-${{ parameters.Env}}'
+    errorActionPreference: 'continue'
+    azurePowerShellVersion: LatestVersion
+    #FailOnStandardError: true
+  enabled: true
