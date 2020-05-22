@@ -1,0 +1,37 @@
+# yaml build
+trigger:
+  branches:
+    include:
+    - master
+    - DUPSUG-Demo
+  paths:
+    include:
+     - ARM/KeyVault
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+stages:
+- stage: Build
+  jobs:
+    - job: Build
+      steps: 
+      - task: CopyFiles@2
+        displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+        inputs:
+          SourceFolder: '$(build.sourcesdirectory)'
+          Contents: |
+                 ARM\KeyVault\*
+                 Scripts\*
+          TargetFolder: '$(build.artifactstagingdirectory)'
+           
+      - task: PublishPipelineArtifact@1
+        displayName: Publish Pipeline Artifact
+        inputs:
+          targetPath: '$(build.artifactstagingdirectory)'
+          artifact: 'DUPSUG'
+          publishLocation: 'pipeline'
+
+        
+    
+        

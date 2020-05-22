@@ -1,0 +1,30 @@
+name: simpeldeploy.$(Date:yyyy.MM.dd)
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+    - DUPSUG-Demo
+  paths:
+    include:
+     - ARM/*
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps: 
+- task: AzureResourceManagerTemplateDeployment@3
+  displayName: Deploy Key Vault
+  inputs:
+                deploymentScope: 'Resource Group'
+                azureResourceManagerConnection: 'DUPSUG VS Enterprise'
+                subscription: 'Visual Studio Enterprise'
+                action: 'Create Or Update Resource Group'
+                resourceGroupName: 'simple-deploy '
+                location: 'West Europe'
+                templateLocation: 'Linked artifact'
+                csmFile: 'ARM/KeyVault/azuredeploy.json'
+                csmParametersFile: 'ARM/KeyVault/azuredeploy.parameters.json'
+                deploymentMode: 'Incremental'
+                overrideParameters: '-keyVaultName testeploy'

@@ -1,0 +1,17 @@
+parameters:
+  Numbers: []
+
+steps:
+  - ${{ each number in parameters.Numbers}}:
+    - task: AzureResourceManagerTemplateDeployment@3
+      inputs:
+        deploymentScope: 'Resource Group'
+        azureResourceManagerConnection: $(ServiceConnection)
+        subscripton: $(Subscription)
+        action: 'Create Or Update Resource Group'
+        resourceGroupName: '${{ parameters.Department}}-${{ parameters.Env}}'
+        location: 'West Europe'
+        templateLocation: 'Linked artifact'
+        csmFile: '$(build.artifactstagingdirectory)/ARM/StorageAccount/azuredeploy.json'
+        deploymentMode: 'Incremental'
+        overrideParameters: '-storageAccountName ${{ parameters.Department}}${{ parameters.Env}}${{ number }}'

@@ -1,0 +1,26 @@
+steps:
+
+#Set FW IP
+- task: AzurePowerShell@5
+  displayName: 'Set FW IP'
+  inputs:
+    azureSubscription: $(ServiceConnection)
+    ScriptPath: $(System.ArtifactsDirectory)\Scripts\Set-KVFWIP.ps1
+    ScriptArguments: -resourcegroupname '${{ parameters.Department}}-${{ parameters.Env}}' -ClientIP  $(ClientIP)
+    errorActionPreference: 'continue'
+    azurePowerShellVersion: LatestVersion
+    #FailOnStandardError: true
+  enabled: true
+
+#Set Tags
+- task: AzurePowerShell@5
+  displayName: 'Set tag'
+  inputs:
+    azureSubscription: $(ServiceConnection)
+    ScriptPath: $(System.ArtifactsDirectory)\Scripts\Set-Tag.ps1
+    ScriptArguments: -resourcegroupname '${{ parameters.Department}}-${{ parameters.Env}}' -tag $(Tag)
+    errorActionPreference: 'continue'
+    azurePowerShellVersion: LatestVersion
+    #FailOnStandardError: true
+  enabled: true
+
