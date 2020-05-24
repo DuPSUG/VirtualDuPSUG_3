@@ -13,7 +13,23 @@ The sessions will be recorded and will be published to our YouTube channel:
 All recordings are available in the following YouTube playlist:
 
 
-### 
+### Links shared during live sessions
+
+* https://everytimezone.com/s/7c7aea8e
+* https://www.twitch.tv/videos/625659676
+* https://www.twitch.tv/videos/625659676?t=01h31m54s
+* https://azureday.community
+* https://github.com/dupsug/virtualdupsug_3
+* https://www.youtube.com/watch?v=2lFgytAJ5hU
+* https://news.microsoft.com/build-2020-book-of-news/
+* https://docs.microsoft.com/en-us/powershell/azure/release-notes-azureps?view=azps-4.1.0
+* https://twitter.com/Jaykul/status/1262800086918144001
+* https://github.com/Azure/azure-powershell/blob/master/documentation/migration-guides/Az.4.1.0-migration-guide.md
+* https://github.com/Azure/azure-powershell/releases/tag/v4.1.0-May2020
+* https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+* https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema
+* https://twitter.com/callmepkwu < Patrick Wu, a creator of wslutilities
+* https://www.youtube.com/user/celebrateubuntu/videos
 
 ## Speakers
 
